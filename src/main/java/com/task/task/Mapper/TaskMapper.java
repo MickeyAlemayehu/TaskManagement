@@ -1,7 +1,7 @@
-package com.task.Mapper;
+package com.task.task.Mapper;
 
-import com.task.Entity.Task;
-import com.task.Dto.TaskDto;
+import com.task.task.Entity.Task;
+import com.task.task.Dto.TaskDto;
 
 public class TaskMapper {
 public static TaskDto mapTaskDto (Task task){

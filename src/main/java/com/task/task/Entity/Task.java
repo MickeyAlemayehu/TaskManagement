@@ -1,30 +1,34 @@
-package com.task.Dto;
-
+package com.task.task.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import java.time.LocalDate;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-public class TaskDto {
-    private int TaskID;
+@Entity
+public class Task {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int TaskId;
+
+    @Column(name = "TaskName")
     private String TaskName;
+    
+    @Column(name = "TaskDescription")
     private String TaskDescription;
+    
+    @Column(name = "DueDate")
     private LocalDate DueDate;
     
     
-    public TaskDto(int taskID, String taskName, String taskDescription, LocalDate dueDate) {
-        TaskID = taskID;
+    public Task(String taskName, String taskDescription, LocalDate dueDate) {
         TaskName = taskName;
         TaskDescription = taskDescription;
         DueDate = dueDate;
     }
-    public TaskDto(String taskName, String taskDescription, LocalDate dueDate) {
-        TaskName = taskName;
-        TaskDescription = taskDescription;
-        DueDate = dueDate;
-    }
-    public int getTaskID() {
-        return TaskID;
-    }
-    public void setTaskID(int taskID) {
-        TaskID = taskID;
+    public int getTaskId() {
+        return TaskId;
     }
     public String getTaskName() {
         return TaskName;
@@ -45,5 +49,4 @@ public class TaskDto {
         DueDate = dueDate;
     }
 
-    
 }

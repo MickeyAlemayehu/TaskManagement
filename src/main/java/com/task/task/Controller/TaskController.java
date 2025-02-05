@@ -1,4 +1,4 @@
-package com.task.Controller;
+package com.task.task.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.task.Dto.TaskDto;
-import com.task.Service.TaskService;
+import com.task.task.Dto.TaskDto;
+import com.task.task.Service.TaskService;
 
 @RestController
 @RequestMapping("/api/tasks")
