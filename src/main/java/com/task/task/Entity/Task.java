@@ -1,12 +1,14 @@
 package com.task.task.Entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import java.time.LocalDate;
+import java.time.String;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "Task")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,10 +21,10 @@ public class Task {
     private String TaskDescription;
     
     @Column(name = "DueDate")
-    private LocalDate DueDate;
+    private String DueDate;
     
     
-    public Task(String taskName, String taskDescription, LocalDate dueDate) {
+    public Task(String taskName, String taskDescription, String dueDate) {
         TaskName = taskName;
         TaskDescription = taskDescription;
         DueDate = dueDate;
@@ -42,10 +44,10 @@ public class Task {
     public void setTaskDescription(String taskDescription) {
         TaskDescription = taskDescription;
     }
-    public LocalDate getDueDate() {
+    public String getDueDate() {
         return DueDate;
     }
-    public void setDueDate(LocalDate dueDate) {
+    public void setDueDate(String dueDate) {
         DueDate = dueDate;
     }
 

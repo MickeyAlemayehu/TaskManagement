@@ -1,21 +1,20 @@
 package com.task.task.Dto;
 
-import java.time.LocalDate;
 
 public class TaskDto {
     private int TaskID;
     private String TaskName;
     private String TaskDescription;
-    private LocalDate DueDate;
+    private String DueDate;
     
     
-    public TaskDto(int taskID, String taskName, String taskDescription, LocalDate dueDate) {
+    public TaskDto(int taskID, String taskName, String taskDescription, String dueDate) {
         TaskID = taskID;
         TaskName = taskName;
         TaskDescription = taskDescription;
         DueDate = dueDate;
     }
-    public TaskDto(String taskName, String taskDescription, LocalDate dueDate) {
+    public TaskDto(String taskName, String taskDescription, String dueDate) {
         TaskName = taskName;
         TaskDescription = taskDescription;
         DueDate = dueDate;
@@ -38,10 +37,10 @@ public class TaskDto {
     public void setTaskDescription(String taskDescription) {
         TaskDescription = taskDescription;
     }
-    public LocalDate getDueDate() {
+    public String getDueDate() {
         return DueDate;
     }
-    public void setDueDate(LocalDate dueDate) {
+    public void setDueDate(String dueDate) {
         DueDate = dueDate;
     }
 
