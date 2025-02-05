@@ -1,7 +1,8 @@
 package com.task.task.Entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import java.time.String;
+
+import java.lang.String;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -12,43 +13,56 @@ import jakarta.persistence.Table;
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int TaskId;
+    private int taskId;
 
     @Column(name = "TaskName")
-    private String TaskName;
+    private String taskName;
     
     @Column(name = "TaskDescription")
-    private String TaskDescription;
+    private String taskDescription;
     
     @Column(name = "DueDate")
-    private String DueDate;
-    
-    
+    private String dueDate;
+
+    public Task() {
+    }
+
     public Task(String taskName, String taskDescription, String dueDate) {
-        TaskName = taskName;
-        TaskDescription = taskDescription;
-        DueDate = dueDate;
+        this.taskName = taskName;
+        this.taskDescription = taskDescription;
+        this.dueDate = dueDate;
     }
+
+
     public int getTaskId() {
-        return TaskId;
+        return taskId;
     }
+
     public String getTaskName() {
-        return TaskName;
+        return taskName;
     }
+
     public void setTaskName(String taskName) {
-        TaskName = taskName;
+        this.taskName = taskName;
     }
+
     public String getTaskDescription() {
-        return TaskDescription;
+        return taskDescription;
     }
+
     public void setTaskDescription(String taskDescription) {
-        TaskDescription = taskDescription;
+        this.taskDescription = taskDescription;
     }
+
     public String getDueDate() {
-        return DueDate;
+        return dueDate;
     }
+
     public void setDueDate(String dueDate) {
-        DueDate = dueDate;
+        this.dueDate = dueDate;
     }
+    
+    
+    
 
 }
