@@ -18,7 +18,7 @@ import com.task.task.Dto.TaskDto;
 import com.task.task.Service.TaskService;
 
 @RestController
-@RequestMapping("/api/tasks")
+@RequestMapping("/api/username/tasks")
 public class TaskController {
 
     @Autowired
